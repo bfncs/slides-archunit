@@ -4,7 +4,7 @@ theme: moon
 ---
 
 # Shoot yourself in the foot less with
-![ArchUnit logo](./logo-archunit.png)
+![ArchUnit logo](./img/logo-archunit.png)
 
 `(🦶🔫)--`
 
@@ -28,7 +28,7 @@ Using the test setup you already have.
 
 ## Prevent the big ball of mud
 
-![Big ball of mud](./big-ball-of-mud.png) <!-- .element width="50%" -->
+![Big ball of mud](./img/big-ball-of-mud.png) <!-- .element width="50%" -->
 
 Notes:
 * We all built it: the mighty, gory monolith.
@@ -37,14 +37,14 @@ Notes:
 
 ----
 
-![Decouple all the things](./decouple-all-the-things.jpg)
+![Decouple all the things](./img/decouple-all-the-things.jpg)
 
 Notes:
 * We went from monolith to microservices.
 
 ----
 
-![Distributed monolith](./distributed-monolith.png)
+![Distributed monolith](./img/distributed-monolith.png)
 
 Notes:
 * But his didn't solve all the problems magically.
@@ -52,7 +52,7 @@ Notes:
 
 ----
 
-![No one wants microservices - it's a necessary evil!](./microservices.jpg)<!-- .element width="60%" -->
+![No one wants microservices - it's a necessary evil!](./img/microservices.jpg)<!-- .element width="60%" -->
 
 Notes:
 You need microservices for two reasons:
@@ -67,7 +67,7 @@ With ArchUnit you can establish rules about package dependency without the need 
 
 ## 👑 Low coupling & high cohesion
 
-![Coupling](./coupling-cohesion.svg)<!-- .element style="background: #fff; padding: .5em; " -->
+![Coupling](./img/coupling-cohesion.svg)<!-- .element style="background: #fff; padding: .5em; " -->
 
 Notes:
 * Cohesion
@@ -148,7 +148,7 @@ in (SomeService.java:14)
 
 ### 🥪 Layers
 
-![Layered architecture](./layers.png)<!-- .element width="50%" -->
+![Layered architecture](./img/layers.png)<!-- .element width="50%" -->
 
 ----
 
@@ -169,7 +169,7 @@ layeredArchitecture()
 
 ### 🍕 Slices
 
-![Sliced architecture](./slices.png)<!-- .element width="50%" -->
+![Sliced architecture](./img/slices.png)<!-- .element width="50%" -->
 
 ----
 
@@ -185,7 +185,7 @@ slices()
 
 ### 🧅 Onion architecture
 
-![Onion architecture](./onion-architecture-check.png)
+![Onion architecture](./img/onion-architecture-check.png)
 
 Notes:
 * a.k.a. Hexagonal Architecture or Ports and Adapters
@@ -209,7 +209,7 @@ onionArchitecture()
 
 ## 🦶🔫 Footguns
 
-![Xzibit laughing with text overlay: „yo dawg! i heard you like to shoot yourself in the foot. so i put a footgun into your architecture checking tool so you can shoot yourself in the foot while trying not to shoot yourself in the foot.](./yo-dawg-footgun.jpg)
+![Xzibit laughing with text overlay: „yo dawg! i heard you like to shoot yourself in the foot. so i put a footgun into your architecture checking tool so you can shoot yourself in the foot while trying not to shoot yourself in the foot.](./img/yo-dawg-footgun.jpg)
 
 ----
 
@@ -285,7 +285,7 @@ https://www.archunit.org/userguide/html/000_Index.html#_fail_rules_on_empty_shou
 
 ### Test-driven architecture refactoring
 
-![Refactoring](./refactoring.webp)
+![Refactoring](./img/refactoring.webp)
 
 Notes:
 * Write the arch tests for the desired state after refactoring first...
@@ -295,7 +295,7 @@ Notes:
 
 ### Freezing Arch Rules
 
-![Ratchet](./ratchet.gif)
+![Ratchet](./img/ratchet.gif)
 
 ```java
 ArchRule rule = FreezingArchRule.freeze(classes().should() /* ... */
@@ -312,8 +312,8 @@ Notes:
 ## Links
 
 * Docs: [archunit.org](https://www.archunit.org/)
-* Repo: [<img alt="github.com" src="./github.png" style="display: inline-block; margin: 0; height: .9em;" />/TNG/ArchUnit](https://github.com/TNG/ArchUnit)
-* Examples: [<img alt="github.com" src="./github.png" style="display: inline-block; margin: 0; height: .9em;" />/TNG/ArchUnit-Examples](https://github.com/TNG/ArchUnit-Examples)
+* Repo: [<img alt="github.com" src="./img/github.png" style="display: inline-block; margin: 0; height: .9em;" />/TNG/ArchUnit](https://github.com/TNG/ArchUnit)
+* Examples: [<img alt="github.com" src="./img/github.png" style="display: inline-block; margin: 0; height: .9em;" />/TNG/ArchUnit-Examples](https://github.com/TNG/ArchUnit-Examples)
 
 <style>
 .reveal pre { width: 100%; }
