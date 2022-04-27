@@ -1,0 +1,11 @@
+{
+  "name": "slides-zookeeper",
+  "private": true,
+  "scripts": {
+    "start": "reveal-md ./index.md -w ",
+    "build": "reveal-md ./index.md --static site --static-dirs img"
+  },
+  "devDependencies": {
+    "reveal-md": "^5.3.2"
+  }
+}
