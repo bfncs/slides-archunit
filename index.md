@@ -24,6 +24,10 @@ Using the test setup you already have.
 
 ## Why?
 
+Notes:
+The value of good software design architecture:
+**Make the program easy to change.**
+
 ----
 
 ## Prevent the big ball of mud
@@ -104,26 +108,52 @@ And are always up to date.
 
 ## How?
 
+### Basic rules
+
 ----
 
-## JUnit 5
+### JUnit 5
 
 ```java
 @AnalyzeClasses(packages = "com.mycompany.myapp")
 public class MyArchitectureTest {
 
     @ArchTest
-    public static final ArchRule myRule = classes()
-        .that().resideInAPackage("..service..")
-        .should().onlyBeAccessed().byAnyPackage("..controller..", "..service..");
+    public static final ArchRule myRule =
+        classes()
+            .that().resideInAPackage("..service..")
+            .should()
+                .onlyBeAccessed()
+                .byAnyPackage("..controller..", "..service..");
 
 }
 ```
 
 Notes:
-* Es gibt auch noch niedrig-levelligere APIs:
-  * Core: wie die Java Reflection API mit zusätzlichem Dependency-Graphen
-  * Lang: Abstrakte Regeln definieren, aber ohne JUnit-Abhängigkeit
+* `onlyBeAccessed` catches only violations by real accesses, i.e. accessing a field, calling a method
+* The Lang API to define and check (high level) rules`) can also be used (and extended) independently of JUnit-Integration
+* Additionally, there's the low level Core API, that resembles Java Reflection API with added functionality  for concepts needed to talk about dependencies between code
+
+----
+
+### Let the API guide you
+
+![API Completion examples](./img/ArchUnit-API.gif)
+
+Notes:
+* There's a potentially nice fluent syntax to define rules.
+* It's still sometimes hard to find the right way to define a rule
+  * `classes()` or `noClasses()`
+  * active (shouldOnlyDependUpon) or passive (shouldOnlyBeDependedUponBy)
+
+----
+
+### Let the ~~API~~ examples repo guide you
+
+![Examples repo](./img/examples-repo.png)
+
+Notes:
+* If in doubt the examples repo shows how to implement a lot of real use cases.
 
 ----
 
@@ -132,7 +162,9 @@ Notes:
 ```
 java.lang.AssertionError: Architecture Violation [Priority: MEDIUM] -
 Rule 'no classes that reside in a package '..service..'
-should access classes that reside in a package '..controller..'' was violated (1 times):
+should access classes that reside in a package '..controller..''
+was violated (1 times):
+
 Method <some.pkg.service.SomeService.callController()>
 calls method <some.pkg.controller.SomeController.execute()>
 in (SomeService.java:14)
@@ -143,6 +175,12 @@ in (SomeService.java:14)
 ### Use cases
 
 👉 https://www.archunit.org/use-cases
+
+---
+
+## How?
+
+### Architecture rules
 
 ----
 
