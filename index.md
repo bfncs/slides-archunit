@@ -45,13 +45,7 @@ Notes:
 
 Notes:
 * We went from monolith to microservices.
-
-----
-
-![Distributed monolith](./img/distributed-monolith.png)
-
-Notes:
-* But his didn't solve all the problems magically.
+* Often we actually built distributed monolith, where everything is still tightly coupled.
 * As small as possible is almost always bad advice in software design. Some logic is always going to cross those boundaries and leads to poor workarounds.
 
 ----
@@ -59,6 +53,12 @@ Notes:
 ![No one wants microservices - it's a necessary evil!](./img/microservices.jpg)<!-- .element width="60%" -->
 
 Notes:
+Microservices are expensive:
+* Operations
+* Cognitive Load
+* Infrastructure
+* Debugging
+
 You need microservices for two reasons:
 * scaling
 * aligning software architecture with team architecture.
