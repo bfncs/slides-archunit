@@ -1,6 +1,6 @@
 ---
 title: Shoot yourself in the foot less with ArchUnit
-theme: moon
+theme: black
 ---
 
 # Shoot yourself in the foot less with
@@ -24,15 +24,21 @@ Using the test setup you already have.
 
 ## Why?
 
+----
+
+![Verifiable architectural characteristics](./img/verifiable-characteristics.png)<!-- .element width="60%" style="padding: 1em; background: #fff;" -->
+
 Notes:
 The value of good software design architecture:
 **Make the program easy to change.**
+
+Also: systems tend towards **entropy** over time.
 
 ----
 
 ## Prevent the big ball of mud
 
-![Big ball of mud](./img/big-ball-of-mud.png) <!-- .element width="50%" -->
+![Big ball of mud](./img/big-ball-of-mud.png)<!-- .element width="50%" -->
 
 Notes:
 * We all built it: the mighty, gory monolith.
@@ -368,9 +374,11 @@ Notes:
 ## Links
 
 * Docs: [archunit.org](https://www.archunit.org/)
-* Repo: [<img alt="github.com" src="./img/github.png" style="display: inline-block; margin: 0; height: .9em;" />/TNG/ArchUnit](https://github.com/TNG/ArchUnit)
-* Examples: [<img alt="github.com" src="./img/github.png" style="display: inline-block; margin: 0; height: .9em;" />/TNG/ArchUnit-Examples](https://github.com/TNG/ArchUnit-Examples)
+* Repo: [<img alt="github.com" src="./img/github.png" class="logo-inline" />/TNG/ArchUnit](https://github.com/TNG/ArchUnit)
+* Examples: [<img alt="github.com" src="./img/github.png" class="logo-inline" />/TNG/ArchUnit-Examples](https://github.com/TNG/ArchUnit-Examples)
 
 <style>
+.reveal img.logo-inline { display: inline-block; margin: 0; height: .95em; vertical-align: middle; }
 .reveal pre { width: 100%; }
+:root { --r-heading-text-transform: none; }
 </style>
