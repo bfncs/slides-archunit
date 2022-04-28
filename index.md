@@ -102,7 +102,10 @@ Notes:
 
 ArchUnit test communicate architectural intent.
 
-And are always up to date.
+And are always up-to-date.
+
+Notes:
+ArchUnit rules can be a tool to talk about architecture in a team or between teams.
 
 ---
 
@@ -311,6 +314,17 @@ classes().that().resideInAPackage("com.myapp.old").should()... // fails if there
 Notes:
 https://www.archunit.org/userguide/html/000_Index.html#_fail_rules_on_empty_should
 
+----
+
+### Don't overdo it!
+
+![Swiss soccer fan meme](./img/overdo.webp)
+
+Notes:
+* Probably better to have a few really important rules
+* Probably better to have the occasional exclusion
+* If the rules do not help you any more: delete/change them!
+
 ---
 
 ## Nice
@@ -344,6 +358,10 @@ Notes:
 * All existing violations are recorded and checked in
 * Only new violations will be reported
 * If violations are fixed, they are removed from the list
+
+---
+
+## Questions?
 
 ---
 
